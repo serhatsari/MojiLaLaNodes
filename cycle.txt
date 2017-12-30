@@ -1,0 +1,19 @@
+
+BOOL checkHasCycle (Node node){
+
+	if node == null || node.nextNode == null || node.nextNode.nextNode == null
+		return NO
+	
+	Node checkNode = node
+	while checkNode != null {
+		if checkNode.nextNode == null || checkNode.nextNode.nextNode == null
+			return NO
+			
+		if checkNode isEqualTo checkNode.nextNode.nextNode
+			return YES
+		else 
+			checkNode = checkNode.nextNode
+	}
+
+	return NO
+}
